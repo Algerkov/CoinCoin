@@ -17,30 +17,32 @@ int main(int argc, const char *argv[])
     //clock_t deb, fin; /*Permet de mesurer le temps, voir l'exemple dans le cour "BACA" de Complexité */
     //deb = clock(); 
     //int i = 0;
+    //while(i < 1000000)
     while(1)
     {
         // NEW
-        coin* coin_at_sha = new coin();
+        coin* piece = new coin();
         fichier* test_fichier = fichier::getInstance();
 
         // COIN STRING AT HASH 
-        coin_at_sha->gen_nonce(acceptes);
-        string string_coin_at_sha = coin_at_sha->create_coin();
+        piece->gen_nonce(acceptes);
+        string string_piece_format = piece->create_coin();
     
         // Hash SHA1
         SHA1 checksum;
-        checksum.update(string_coin_at_sha);
+        checksum.update(string_piece_format);
         const string hash = checksum.final();
         //cout << "The SHA-1 of \"" << string_coin_at_sha << "\" is: " << hash << endl;
 
         // WRITE IN A PURSE
-        test_fichier->ecrire(string_coin_at_sha);
-        delete coin_at_sha;  
+        test_fichier->ecrire(hash, string_piece_format);
+        delete piece;  
         //i++;      
     }
-    //fin = clock();
-    //double duree = ((double)(fin - deb)) / CLOCKS_PER_SEC;
-    //printf("\n Resolution en %f Secondes\n",duree);      
-    
+    /*
+    fin = clock();
+    double duree = ((double)(fin - deb)) / CLOCKS_PER_SEC;
+    printf("\n Resolution en %f Secondes\n",duree);      
+    */
     return 0;
 }

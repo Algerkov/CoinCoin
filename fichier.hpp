@@ -14,7 +14,7 @@ class fichier
         
     // METHODES
     public:
-        void ecrire(std::string coin);
+        void ecrire(std::string coin_hash, std::string coin);
         static fichier* getInstance();
     private:
         fichier();
