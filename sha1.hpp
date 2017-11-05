@@ -24,7 +24,7 @@
 #include <cstdint>
 #include <iostream>
 #include <string>
-
+#include <stdint.h>
 
 class SHA1
 {

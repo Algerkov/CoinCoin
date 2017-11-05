@@ -2,6 +2,7 @@
 #include "fichier.hpp"
 #include "coin.hpp"
 
+#include <cstdlib>
 #include <string>
 #include <iostream>
 #include <time.h>
