@@ -15,6 +15,7 @@ using std::endl;
 int main(int argc, const char *argv[])
 {
     std::string acceptes="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+-*$#";
+    fichier* test_fichier = fichier::getInstance();
     //clock_t deb, fin; /*Permet de mesurer le temps, voir l'exemple dans le cour "BACA" de Complexité */
     //deb = clock(); 
     //int i = 0;
@@ -23,7 +24,6 @@ int main(int argc, const char *argv[])
     {
         // NEW
         coin* piece = new coin();
-        fichier* test_fichier = fichier::getInstance();
 
         // COIN STRING AT HASH 
         piece->gen_nonce(acceptes);
