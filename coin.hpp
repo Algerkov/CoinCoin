@@ -6,8 +6,6 @@
 #include <ctime>
 #include <sstream>
 
-
-
 class coin
 {
     // ATTRIBTUS
