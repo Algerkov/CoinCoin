@@ -16,6 +16,8 @@ int main(int argc, const char *argv[])
 {
     std::string acceptes="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+-*$#";
     fichier* test_fichier = fichier::getInstance();
+    SHA1 checksum;
+
     //clock_t deb, fin; /*Permet de mesurer le temps, voir l'exemple dans le cour "BACA" de Complexité */
     //deb = clock(); 
     //int i = 0;
@@ -30,7 +32,6 @@ int main(int argc, const char *argv[])
         string string_piece_format = piece->create_coin();
     
         // Hash SHA1
-        SHA1 checksum;
         checksum.update(string_piece_format);
         const string hash = checksum.final();
         //cout << "The SHA-1 of \"" << string_coin_at_sha << "\" is: " << hash << endl;
