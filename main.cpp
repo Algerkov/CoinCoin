@@ -14,7 +14,7 @@ using std::endl;
 
 int main(int argc, const char *argv[])
 {
-    std::string acceptes="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890./=+-*$#";
+    std::string acceptes="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890=+-*$#";
     //clock_t deb, fin; /*Permet de mesurer le temps, voir l'exemple dans le cour "BACA" de Complexité */
     //deb = clock(); 
     //int i = 0;
