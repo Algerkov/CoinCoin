@@ -22,12 +22,12 @@ void coin::gen_nonce(string acceptes)
     int v1 = rand() % 27;
     std::string tmp = "";
 
-    for(size_t i=0;i<4;i++)
+    for(size_t i=0;i<3;i++)
     {
-        size_t pos = rand()%72;//j'ai 72 caractères dans acceptes
+        size_t pos = rand()%68;//j'ai 72 caractères dans acceptes
         tmp+=acceptes[pos];
     }
-    m_nonce.replace(v1, 4, tmp);
+    m_nonce.replace(v1, 3, tmp);
 }
 
 string coin::create_coin()
