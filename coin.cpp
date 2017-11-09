@@ -24,7 +24,7 @@ void coin::gen_nonce(string acceptes)
 
     for(size_t i=0;i<3;i++)
     {
-        size_t pos = rand()%68;//j'ai 72 caractères dans acceptes
+        size_t pos = rand()%62;//j'ai 72 caractères dans acceptes
         tmp+=acceptes[pos];
     }
     m_nonce.replace(v1, 3, tmp);
