@@ -11,11 +11,12 @@ void fichier::ecrire(string hash_coin, string coin)
     if (hash_coin.substr(0,8) == "cccccccc")
     {
         ofstream fichier_purse;
-        fichier_purse.open("purse.txt", ios::out | ios::app);
+        fichier_purse.open("purse8.txt", ios::out | ios::app);
     
         if(fichier_purse)
         {
-            fichier_purse << coin <<endl ;
+            cout << coin << endl;
+            fichier_purse << coin <<endl;
             fichier_purse.close();
         }
         else
