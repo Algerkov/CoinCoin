@@ -1,2 +1,2 @@
 # CoinCoin
-`g++ -Wall -Werror -o coin3 *.cpp -O2`
+`g++ -Wall -Werror -o coin *.cpp -O2`
